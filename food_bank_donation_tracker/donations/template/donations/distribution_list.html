@@ -1,0 +1,8 @@
+<h1>Food Distributions</h1>
+<ul>
+    {% for distributions in distributions %}
+    <li>
+        Distributed {{ distribution.quantity_distributed }} units of {{ distribution.food_donation.food_item }} to {{ distribution.recipient_name }} on {{ distribution.date_distributed }}
+    </li>
+    {% endfor %}
+</ul>

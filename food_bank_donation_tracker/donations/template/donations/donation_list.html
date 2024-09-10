@@ -1,0 +1,9 @@
+<h1>Food Donations</h1>
+<ul>
+    {% for donation in donations %}
+
+    <li>
+        {{ donation.food_item }} donated by {{ donation.donor.name }} on {{ donation.date_donated }} ({{ donation.quantity }} units)
+    </li>
+    {% endfor %}
+</ul>
