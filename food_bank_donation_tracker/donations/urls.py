@@ -3,8 +3,13 @@ from django.urls import path
 from . import views
 
 
+#urlpatterns = [
+#    path(' ', views.donation_list, name='donation_list'),
+#    path('add/', views.FoodDonation, name='add_donation'),
+#]
+
+
 urlpatterns = [
-    path(' ', views.donation_list, name='donation_list'),
-    path('distributions/', views.distribution_list, name='distribution_list'),
-]
+    path('', views.home, name='home'),
+    ]
 

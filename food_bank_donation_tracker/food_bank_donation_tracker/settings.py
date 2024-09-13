@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -117,6 +117,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/images/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -125,18 +127,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 APPEND_SLASH = True
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    },
-}
+#LOGGING = {
+ #   'version': 1,
+  #  'disable_existing_loggers': False,
+   # 'handlers': {
+    #    'console': {
+     #       'class': 'logging.StreamHandler',
+      #
+      # 
+      # },
+    #},
+    #'root': {
+     #   'handlers': ['console'],
+      #  'level': 'DEBUG',
+    #},
+#},
+
+print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
+print("DATABASES:", DATABASES)
+print("MIDDLEWARE", MIDDLEWARE)
+print("INSTALLED_APPS:", INSTALLED_APPS)
